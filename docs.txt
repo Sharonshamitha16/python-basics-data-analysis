@@ -1,0 +1,584 @@
+SELF STUDY - PYTHON & REACT-NEXTJS 
+
+Day - 1 (12-02-26: 8.00-9.30)
+
+1)Python Basics  Keypoints 
+(reference - https://www.scaler.com/topics/course/python-for-beginners/video/693/)
+
+Introduction of python  - guido d van rossum - 1993
+Installations - anaconda
+Print  - print(“hello world”)
+Variables rules 
+	i) can start with a-z A-Z _
+	ii) can't start with numbers 
+	iii) can't have built-in names as variable names 
+	iv) can be alphanumeric like ( Start_1)
+Stack and heap memory
+Notes: stores as a stack(block of memory) like a stack of books 
+The size of memory to be allocated is known to the compiler, and whenever a function is called, its variables get memory allocated on the stack. It is the memory that is only needed inside a particular function or method call.
+Heap memory is reference memory 
+The variables are needed outside of method or function calls or are shared within multiple functions globally, and are stored in Heap memory
+Id function - nothing but the address of the variable assigned 
+Python comments - # 
+Data Types - Integer, boolean, float, strings, none
+Integers - int
+Boolean - bool
+Float - float
+Strings - str
+None - none
+Input function and Conversion -
+i)x= input()
+10
+print(x) => o/p 10
+print(type(x)) =>o/p str
+## by default the input has type str if need to convert to any data type then 
+ii) int(x) 
+print(type(x)) => o/p integer
+## we cant directly convert decimal numbers to int 
+From str->float->int
+x=input()
+1.5
+print(x) = > o/p ‘1.5’
+print(float(x))
+print(int(x))
+print(x) => o/p 1
+##cant convert string the original str to int 
+x=sara
+print(int(x)) =>o/p throws error
+
+Print multiple datatypes in single line
+## inbuilt the print stmt has a syntax like sep =” “ ‘/n’  => print?
+
+    k)	To cut the default separation we can add like 
+	print(“am” , “sam” , 1,3,2,3,1,sep=’,’) 
+	=>o/p am,sam,1,3,2,3,1
+          sep=’/n’ -> means next linee
+
+l) Operators 
+	i) Arithmetic(+)
+	ii)divison (/)  ## always returns in float value
+	iii)multiplication (*)
+	iv)mod(%) remainder of the division -> 5%3 = 2
+	v)sub(-)
+	vi)floor division(//) nearest smallest integer is what it gives.. -> 5//3 =>(if u divide 1.66 so nearest smallest is 1.5 this returns in int not float so 1) (take number line )
+	vii)to the power(**) 5**3 => 5*5*5 = 125
+
+## cant multiply str* str  can add str which gives a concentrated word if str* int the no. of times multiplied will be printed
+print( “sara” *3)
+=>o/p sarasarasara
+
+i) Operators Contd.,
+Comparison operators =>  >, <, !=, == 		
+Assignment Operators
+=, -=,+=,/=,%=
+Ex: a=5
+a+=3 => a=a+3 = 8
+a-=3 => a=a-3=>2
+a%=3 =>a=a%3=>1
+a/=3=>a=a/3=0
+
+DAY -2 Python Basics Contd.,
+Logical Operators
+And , or , not
+i) only if bith true then only true others all false for -> and logical operator
+T & T = T
+T & F = F
+F & T =F
+T & F =F
+4>3 and 3>2 = true 
+3>4 and 2>3 = false
+So on…
+ii)if any one of them has true then that is true; others all false -> or logical operator
+T & T =T
+T & F =T
+F & T =T
+F& F = F
+iii) not means opposite of one -> not true means false and viceversa
+iv) special operatore 
+In operator - returns boolean
+I.e can check single letter , word but not jumbled words
+Eg. name = “sharon shamitha”
+ sharon in name ->true
+“S” in name -> false
+“Norahs” in name ->false
+Is operator
+To check whether it holds same memory it says true orelse false 
+a=5
+b=5
+print(id(a))= > 1234
+Print (id(b))=>1234
+Challenge 1
+
+
+def volume_sphere(r):
+    '''input: r = Input in integer format
+       output:return Vol of sphere upto two decimals'''
+    # YOUR CODE GOES HERE
+    Vol=None
+    x=(4*(22/7)*r**3)/3;
+    Vol=round(float(x),2)
+   
+    return Vol
+
+
+
+class Solution:
+    # @param A : string
+    # @param B : string
+    # @return a strings
+    def solve(self, A, B):
+      if len(A) <=1000 and len(B)<=1000:
+         return A+B
+    
+https://www.scaler.com/topics/course/python-for-beginners/challenge/392620/challenge/?mode=read   
+
+
+
+
+
+
+
+def volume_sphere(r):
+    '''input: r = Input in integer format
+       output:return Vol of sphere upto two decimals'''
+    # YOUR CODE GOES HERE
+    Vol=None
+    x=(4*(22/7)*r**3)/3;
+    Vol=round(float(x),2)
+   
+    return Vol
+
+
+
+
+
+
+
+DAY-3 Python Basics Contd.,
+
+m)Control flow 
+
+j) if else statement
+age= int(input())
+If age>18:
+    Print (“u r eligible’)
+else:
+    print(“u r not eligible)
+
+i/p =18
+U r eligible
+
+k) nested if else stmt
+
+age= int(input())
+If age>18:
+    Print (“u r eligible’)
+	If age>=65:
+	    print(“take rest”)
+           else:
+	    print(“u r eligible”)
+else:
+    print(“u r not eligible)
+
+k) elif statement
+num =int(input())
+
+If num>0:
+    Print (“positive”)
+elif age==0:
+	    print(“0”)
+ else:
+    print(“negative”)
+
+Challenge
+ Find the max number in the list 
+mark=[90,100,80,30,50,20]
+x=int(input())
+If x>=100:
+ print(“this is max”)
+elif x<=10:
+ print(“this is low”)
+else:
+ print(“this is mid”)
+
+highest=mark[0]
+for i in marks:
+     If i > highest:
+	highest =i
+print(highest)
+
+
+Grading system
+Elif statement
+A- >=90
+B - <=90 AND <=80
+C -> <=80 AND >=70
+D -> <=70 AND >=60
+E- <60
+
+mark = int(input())
+ 
+if mark >=90:
+   print(“A”)
+elif mark <=90 AND mark<=80:
+   print(“B”)
+elif mark <=80 AND mark>=70:
+   print(“C”)
+elif mark<=70 AND mark>=60:
+   print(“D”)
+else:
+   print(“E”)
+
+
+
+
+
+
+
+class Solution:
+    # @param A : integer
+    # @return an integer
+    def solve(self, A):
+        # A= int(input())
+        if (A % 400== 0) or (A % 4==0 and A % 100 !=0):
+            return 1
+        else:
+            return 0
+   
+
+
+
+
+
+
+
+https://www.scaler.com/topics/course/python-for-beginners/challenge/392627/challenge/?mode=read
+
+
+
+
+class Solution:
+    # @param A : integer
+    # @return a list of strings
+    def fizzBuzz(self, A):
+        # A = int(input())
+        result=[]
+        for i in range (1, A+1):
+            if i % 3 == 0 and i % 5 == 0:
+                result.append("FizzBuzz")
+                # return
+            elif i % 5 == 0:
+               result.append("Buzz")
+            #    return
+            elif i % 3 == 0 :
+                result.append("Fizz")
+                # return
+            else:
+                result.append(str(i))
+        return result
+
+
+DAY-4 
+n)LOOPS
+
+i) While loop 
+ii) for loop 
+
+While Loop 
+
+
+
+i)Need to print 6 times one stmt
+
+
+i=1
+while i <=6:
+    print(“you r the best”)
+    i+=1
+
+ii) print numbers 1-10 using while loop 
+
+i=1
+While i<10:
+   print(i, end=” ”) 
+   i+=1
+
+#If need to print in same line
+
+
+iii) print even numbers
+
+i=10
+
+While i <10:
+    If i % 2== 0:
+    print( i)
+    i+=1
+
+iv) need to find sum of n numbers 
+# n*(n+1)/2
+
+i=1
+While i <10:
+    If i *(i+1)/2:
+	print(i)
+    i+=1
+
+
+i=1
+add=0
+While i<10:
+  add+=i   # add= add+i
+   i+=1	   # i=i+1
+print(add)
+
+
+o)Range Function
+
+Range allows u to generate a series of numbers
+It is iterable as well
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DAY -6 DAY -5 skipped  fir loop contd.,
+
+For Loop 
+n=int(input())
+for i in range (1, 10):
+	print(i *n)
+
+Print a pattern using for loop 
+
+n= 4 
+# # # # 
+# # # #
+# # # #
+
+n=4
+for i in range (1,4):
+	print(“#”, end “ ”)
+print()
+for i in range (1,4):
+	print(“#”, end “ ”)
+print()
+for i in range (1,4):
+	print(“#”, end “ ”)
+print()
+for i in range (1,4):
+	print(“#”, end “ ”)
+print()
+ To reduce this we can do nested for loop
+
+for i in range (1,4):
+	for j in range(1,4):
+		 print(“#”, end “ “)
+	print()
+
+Pattern 2
+
+
+#
+# # 
+# # #
+# # #  #
+
+
+ for i in range (1,4):
+	for j in range (1, 4):
+		Print (j-1, end “ “)
+	print()
+
+
+DAY-7 Strings
+
+
+Alphabet, A-Za-z 0-9 special characters and single, 
+
+Every alphabet is corresponded to integer that is unicode 
+To find encoded alphabet is ord(“a”)
+String Methods
+
+captialize
+title
+upper
+lower
+fine
+count
+Index
+replace
+split
+islower
+Isupper
+Isnumeric
+Isalpha
+
+
+DAY-8 LIsts 
+
+a)count - says hw much there as num
+b)index - gives index
+c) pop - removes last item
+c)remove- removes whatevr we need 
+d)sort
+e) insert
+f) append - it adds at last as a object whole obj l=[1,2]  l2=[3,4] l1.append(12)
+l1= [1,2,[3,4]]
+g)extend - it iterates and append
+ l=[1,2]  l2=[3,4] l1.append(12)
+l1= [1,2,3,4]
+
+
+DAY-9 TUPLES 
+
+Tuples are ordered collection
+Unchangeable
+Iterable
+Heterogenous
+
+Frozen datta 
+
+
+
+
+DAY-10 Dictionary (01-03-25)
+
+Dict - key value pair 
+Dict are ordered
+Does not support indexing
+Can be accessed through key
+
+
+DAY-11 sets
+
+Unique collection 
+Unordered
+Uniindexed
+Mutbale
+
+Set 
+
+Pop - remove random
+Remove - remove selected  s.remove(“R”)
+Add - adds the value 
+
+Intersection - says the common value
+Union - says all the value if repeated then omits as its set and also union 
+
+Difference - gives the non repeated words 
+Py = {“iron”, “hulk”,spidy”}
+Ja = {“iron”,”harry”, “Ant”}
+Py.difference(ja)
+
+{, “hulk”,spidy”}
+ja .differnce(py)
+{”harry”, “Ant”}
+
+
+DAY- 12 FUNCTIONS
+
+User defined
+Built in function
+
+
+
+def greet():
+     print(“hi”)
+print(greet())
+Doc string uses - to define a function  like comments in “”” “”””  ‘’’mm’’’
+
+
+Argument and a parammetr
+
+
+
+Return
+
+
+A function call ends when return statement is executed 
+It returns the expression back to  the function
+The code after the return statement are not executed 
+If there is no return then that function returns none 
+
+
+
+
+DAY 13   23-03-26
+FUNCTIONS 
+
+Lambda function 
+
+def add(a,b:
+Return a+b
+
+add(3,4)
+7
+(lamda a,b : a+b)(3,4)
+7
+
+
+Arbitrary arguments
+
+When  a value is passed but not known 
+
+For eg:
+
+def test (args):
+   Print (args)
+test(“abc”)
+
+
+
+
+ 
+ KEYWORD ARGUMENTS:
+
+Variable no. of keyword arguments
+
+ DAY -14  25-03-26
+
+OOPS IN PYTHON
+
+Object oriented programming language
+
+
+A class is template  or  blueprint or entity of class 
+ 2,3, are object of integer class
+It has attributes and behaviour
+
+
+Abstarction - which means displaying only the essentials and hiding the internal working of it
+
+Encapsulation - binding the data into a single unit 
+
+Inheritance - child getting inherited from the parent class the behavour , and so on and also it can has it own feature apart from the parents feature 
+
+Polymorphism - having many form of method can be used for varies objects
+
+
+Class → Blueprint
+Object → Instance
+Encapsulation → Hide data
+Inheritance → Reuse code
+Polymorphism → Same method, different output
+Abstraction → Hide complexity 
+
+DAY - 15 26-03-26
+Constructor 
+  it is a spl method that creat ean dinitializes the obj of the class
+  it is a method defined in class
+  it is executed automatically during the object creation 
+  
